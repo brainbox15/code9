@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox layout</title>
+    <style>
+    body { margin:0px; }
+
+.p {
+  margin: 10px;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+  flex:1;
+}
+.fc{
+  display:flex;
+  flex-flow:row wrap;
+  background-color:red;
+  min-height: 100vh;
+}
+.fc header,
+.fc footer {
+margin:0px;
+  flex: 0 1 100vw;
+}
+    </style>
+</head>
+<body>
+<body>
+<div class="fc">
+    <header class="p">For a long time I used to go to bed early. Sometimes,</header>
+    <aside class="p">For a long time I used to go to bed early. Sometimes, when I had put </aside>
+    <main class="p">For a long time I used to go to bed early. Sometimes, when I had put out my candle, my eyes would close so quickly that I had not even time to saye
+        For a long time I used to go to bed early. Sometimes, when I had put out my candle, my eyes would close so quickly that I had not even time to saye
+        For a long time I used to go to bed early. Sometimes, when I had put out my candle, my eyes would close so quickly that I had not even time to saye</main>
+    <section class="p">For a long time I used to go to bed early. Sometimes, when I had put</section>
+    <footer class="p">For a long time I used to go to bed early. Sometimes, </footer>
+</div>
+</body>
+</body>
+</html>
