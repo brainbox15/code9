@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+  /* removing padding and margin from body element */
+  body{
+    margin:0px;
+    padding:0px;
+  }
+
+  /* setting up the parent of the flex box container */
+  .parent{
+    display:flex;
+    flex-flow: row wrap;
+    /* background-color: blue; */
+    min-height:100vh;
+    background-image: url(C:\Users\MICK\Downloads\pic1.jpg);
+
+  }
+
+  /* adding margin, border-radius and flex to the flexbox parent children. */
+  .parent > * {
+    margin: 0.5px;
+    border-radius: 5px;
+    flex:1;
+  }
+
+  /* setting the width of .header, .footer and footer=link */
+  .header, .footer, .footer-link {
+    flex: 100vw;
+  }
+
+
+  /* seting height of .aside and .main */
+  .aside, .main{
+    height: 70em;
+  }
+
+
+  /* setting the heght of .footer */
+  .footer{
+    height: 15em;
+  }
+
+  /* setting height and background=color of .footer-link */
+  .footer-link{
+    height: 10em;
+    background-color: red
+  }
+
+  /* adding margin to .footer-child */
+  .footer-child{
+    margin-top: 4em;
+  }
+
+  /* .header height */
+  .header{
+    height: 90em;
+  }
+
+
+  p > a {
+    margin-left: 5em;
+    font-size: 1.5em;
+  }
+
+
+  /* width and hight of .image */
+  .image{
+    width:  100%;
+    height: 50%;
+  }
+
+  .social-items{
+    text-align: right;
+    margin-top: 70px;
+  }
+
+  /* setting font size of .header-text */
+  .header-text{
+    font-size: 45px;
+
+  }
+
+  /* adding margin to .cart */
+  div .cart{
+    margin: 10px;
+  }
+
+  /* margin setup for social mdedia icons */
+  .social-logo{
+    margin-left: 5px;
+    margin-right: 5px;
+
+  }
+
+  /* adding margin-top to image. */
+  .main-img{
+    margin-top: 5em;
+  }
+
+
+  .aside-img{
+    margin-top: 5em;
+  }
+
+
+  /* text align and margin setup for .intro */
+  .intro{
+    text-align: justify;
+    margin-left: 20em;
+    margin-right: 20em;
+    margin-top: 6em;
+  }
+
+  .list li{
+    display: inline-block;
+    margin-right: 5em;
+  }
+
+  /* navigation text */
+  .list li a {
+    color: black;
+    font-size: 24PX;
+    text-decoration-line: none;
+  }
+
+  /* Slideshow container */
+  .container{
+    position: relative;
+  }
+
+  /* caption text */
+  .text{
+    position: absolute;
+    font-size: 2em;
+    color:red;
+    top: 10px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+
+  /* margin for email notification */
+  .sign-up{
+    margin-top: 5em;
+    margin-left: 1em;
+
+  }
+
+  /* text slide */
+  marquee{
+    font-size: 20px;
+    font-style:italic;
+  }
+
+  .section{
+    text-align: center;
+    font-size: 44px;
+    color: red;
+    font-weight: bold;
+  }
+
+  /* Navigation link at footer section */
+  .footer-child a {
+    color: black;
+  }
+
+
+  {
+    box-sizing: border-box;
+  }
+
+  .image-sliderfade
+  {
+    display: none;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot
+  {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: transparent;
+    border-color: #ddd;
+    border-width: 5 px;
+    border-style: solid;
+    border-radius: 50%;
+    display: inline-block;
+    transition: border-color 0.6s ease;
+  }
+
+  .active
+  {
+    border-color: #666;
+  }
+
+  /* Animation */
+  .fade
+  {
+    -webkit-animation-name: fade-image;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade-image;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade-image
+  {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade-image
+  {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px)
+  {
+    .text {font-size: 11px}
+  }
+
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+  // using jquery to manipulate the DOM
+  function u(){
+    var access = $(".header-items").find("img");
+    access.click(function(){
+      $("marquee").css("color", "blue");
+    })
+  }
+  $(u);
+</script>
+</head>
+<body>
+  <div class="parent">
+    <header>
+        <div class="header">
+
+      <header>
+        <div class="header-items">
+          <img src="C:\Users\MICK\Downloads\header logo.png" alt="header image"  width="200">
+          <a href="#">
+            <img class="cart" src="https://img.icons8.com/ios-filled/50/000000/shopping-cart-promotion.png" title="cart" width="30" align="right">
+          </a>
+        </div>
+        <marquee behavior="scroll" direction="left" scrollamount="3"> Welcome to fashion freak, the home of fashion, where you get nothing but the best.</marquee>
+      </header>
+      <nav>
+        <center>  <ul class="list">
+          <li><a href="#">| Home |</a></li>
+<li><a href="#">| fashion styles |</a></li>
+          <li><a href="#">| Accessories |</a></li>
+          <li><a href="#">| Contact |</a></li>
+        </ul>
+      </center>
+    </nav>
+    <div class="container">
+      <div class="image-sliderfade fade">
+        <img  class="image" src="C:\Users\MICK\Downloads\pic2.jpg" alt="header image">
+        <p class="text">Order now and get discount of 10%</p>
+      </div>
+
+      <div class="image-sliderfade fade">
+        <img  class="image" src="C:\Users\MICK\Downloads\pic7.jpg" alt="header image">
+        <p class="text">Spend less and save more!</p>
+      </div>
+
+
+      <div class="image-sliderfade fade">
+        <img  class="image" src="C:\Users\MICK\Downloads\pic8.jpg" alt="header image">
+        <p class="text">Varieties of quality styles to choose from</p>
+      </div>
+
+    </div>
+
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="intro">
+      <h2>Buying cothes should leave you happy and good-looking,
+        we showcase fashion accessories and different types of fashion styles ranging
+        from Office wears, casual, classic, exotic, vintage, chic and flamboyant—we’ve got you covered.</h2>
+      </div>
+
+
+      <p class="section">Categories</p>
+    </div>
+      </header>
+      <main>
+    <div class="main">
+      <figure>
+        <a href="https://www.amazon.com/s?k=clothes&i=fashion-womens-intl-ship&ref=nb_sb_noss">
+          <img src="C:\Users\MICK\Downloads\pic1.jpg" alt="header image" width="500">
+        </a>
+        <figcaption>Range of clothings</figcaption>
+        <a href="https://www.amazon.com/s?k=men+clothes&i=fashion-mens-intl-ship&ref=nb_sb_noss_2">
+          <img  class="main-img" src="C:\Users\MICK\Downloads\pic4.jpg" alt="header image" width="500">
+        </a>
+        <figcaption>Men's wears</figcaption>
+      </figure>
+
+    </div>
+  </main>
+  <aside>
+    <div class="aside">
+      <figure>
+        <a href="https://www.amazon.com/s?k=accessories+for+women+fashion&i=fashion-womens-intl-ship&crid=DK8C2PVBZ7KZ&sprefix=acces%2Cfashion-womens-intl-ship%2C554&ref=nb_sb_ss_i_4_5">
+          <img  src="C:\Users\MICK\Downloads\pic3.jpg" alt="header image" width="400">
+        </a>
+        <figcaption>Accessories</figcaption>
+        <a href="https://www.amazon.com/s?k=clothes+women&i=fashion-womens-intl-ship&crid=3C6VUYVC6EAYP&sprefix=clo%2Cfashion-womens-intl-ship%2C452&ref=nb_sb_ss_i_2_3">
+          <img class="aside-img"  src="C:\Users\MICK\Downloads\pic5.jpg" alt="header image" width="500">
+        </a>
+        <figcaption>Women's wears</figcaption>
+      </figure>
+  </div>
+</aside>
+
+    <div class="footer">
+
+      <form class="sign-up" action="index.html" method="get">
+        <div>
+
+
+          <label for="Email">Sign up for updates, content and exclusive news about Fashion Freak</label>
+        </div>
+        <br>
+        <div>
+          <input type="email" id="email" value="Email">
+          <input type="submit" id="email" value="subscribe">
+        </div>
+      </form>
+
+      <div class="social-items"
+      <span class="logo-text">follow us:</span>
+      <a href="https://twitter.com/Fashion36748355">
+        <img class="social-logo" src="C:\Users\MICK\Downloads\twitter.png" alt="twitter icon" title="twitter"  width="30">
+      </a>
+      <a href="https://web.facebook.com/Fashion-Freak-107767730803711/?modal=admin_todo_tour">
+        <img class="social-logo" src="C:\Users\MICK\Downloads\facebook.png" alt="facebook icon" title="facebook" width="30">
+      </a>
+      <a href="https://www.instagram.com/fashionfreak5555/">
+      <img class="social-logo" src="C:\Users\MICK\Downloads\instagram.png" alt="instagram icon" title="instagram" width="30">
+</a>
+    </div>
+  </div>
+
+  <div class="footer-link">
+    <div class="footer-child">
+      <center>  <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </center>
+    </div>
+    <center><p>Design + Code by Omoraka Michael</p>  </center>
+    <center><p>© 2020 FASHION FREAK. ALL RIGHTS RESERVED</p></center>
+    <!-- <button type="button" name="button">send</button> -->
+  </div>
+</div>
+
+<script>
+
+var slideIndex = 0;
+showSlides(); // call showslide method
+
+function showSlides()
+{
+  var i;
+
+  // get the array of divs' with classname image-sliderfade
+  var slides = document.getElementsByClassName("image-sliderfade");
+
+  // get the array of divs' with classname dot
+  var dots = document.getElementsByClassName("dot");
+
+  for (i = 0; i < slides.length; i++) {
+    // initially set the display to
+    // none for every image.
+    slides[i].style.display = "none";
+  }
+
+  // increase by 1, Global variable
+  slideIndex++;
+
+  // check for boundary
+  if (slideIndex > slides.length)
+  {
+    slideIndex = 1;
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.
+    replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+
+  // Change image every 2 seconds
+  setTimeout(showSlides, 5000);
+}
+
+</script>
+</body>
+</html>
